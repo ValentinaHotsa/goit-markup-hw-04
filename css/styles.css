@@ -423,9 +423,21 @@ width: 264px;
 .social-media-item {
 }
 
-.social-media-link {}
-
-.social-media-icon {}
+.social-media-link {
+    display: flex;
+        width: 40px;
+        height: 40px;
+        background-color: var(--primary-brand-color);
+        border-radius: 100%;
+        justify-content: center;
+        align-items: center;
+}
+.social-media-link:hover {
+    background-color: var(--succes-color);
+}
+.social-media-icon {
+    
+}
 
 
 /* Page 2 */
