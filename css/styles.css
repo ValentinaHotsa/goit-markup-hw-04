@@ -89,6 +89,16 @@ border-bottom: 1px solid var(--accent-color);
         gap: 40px;
 
 }
+.active::after {
+    bottom: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+        height: 4px;
+        border-radius: 2px;
+            background-color: var(--pressed-state-color);
+            content: "";
+}
 .header-logo{
     font-family: 'Raleway', sans-serif;
         font-style: normal;
@@ -115,6 +125,7 @@ border-bottom: 1px solid var(--accent-color);
 .container-nav-logo {
     display: flex;
     align-items: center; 
+ 
 }
 .container-nav {
   
@@ -127,6 +138,8 @@ border-bottom: 1px solid var(--accent-color);
     color: var(--dark-color);
     padding: 24px 0;
 }
+
+
 .header-nav-list{
     display: flex;
     align-items: center;
@@ -138,9 +151,14 @@ border-bottom: 1px solid var(--accent-color);
 {
   color: var(--pressed-state-color);
   
+
   
 }
-
+.header-nav-link {
+    transition-property: transition-duration, transition-timing-function;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .header-adress {
     font-style: normal;
     display: flex;
@@ -165,8 +183,13 @@ display: flex;
     letter-spacing: 0.02em;
   color: var(--text-color);
 padding: 24px 0;
-}
 
+}
+.header-adress-link {
+    transition-property: transition-duration, transition-timing-function;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .header-adress-link:hover,
 .header-adress-link:focus {
     color: var(--pressed-state-color);
@@ -179,9 +202,16 @@ padding: 24px 0;
 
 .hero 
 {background-color: var(--hero-background-color);
-padding: 188px 0;
-    
-   
+padding: 188px 0; 
+background-image: 
+linear-gradient(to bottom,
+        rgba(46, 47, 66, 0.70),
+        rgba(46, 47, 66, 0.70)),
+url(/images/hero-bckgrnd.jpg);
+background-repeat: no-repeat;
+background-position: center center;
+max-width: 1440px;
+
 }
 
 
@@ -215,12 +245,15 @@ border: none;
  min-width: 169px;
  height: 56px;
  margin: 0 auto;
-   
+transition-property: transition-duration, transition-timing-function;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .hero-btm:hover,
 .hero-btm:focus {
     background-color: var(--pressed-state-color);
+    
 }
 
 /* Features section */
@@ -298,7 +331,9 @@ height: 300px;
 
 /* Team section */
 .section {}
-.container-section-team{}
+.container-section-team{
+
+}
 .team {
 background-color: var(--light-color);
 padding-top: 120px;
@@ -324,8 +359,9 @@ gap: 24px;
 
 .section-team-item {
     background-color: var(--white-background-color);
-    box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-        border-radius: 0px 0px 4px 4px;
+    box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
+        0px 1px 1px 0px rgba(46, 47, 66, 0.16),
+        0px 1px 6px 0px rgba(46, 47, 66, 0.08);
 width: 264px;
    
  
@@ -431,9 +467,13 @@ width: 264px;
         border-radius: 100%;
         justify-content: center;
         align-items: center;
-}
+transition-property: transition-duration, transition-timing-function;
+    transition-duration: 250ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    }
 .social-media-link:hover {
     background-color: var(--succes-color);
+    
 }
 .social-media-icon {
     
@@ -464,13 +504,17 @@ font-style: normal;
     padding: 12px 24px;
     border: 1px solid var(--accent-color);
     border-radius: 4px;
+    transition-property: transition-duration, transition-timing-function;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .filter-button:hover,
 .filter-button:focus {
     color: var(--white-background-color);
     background-color: var(--pressed-state-color);
     cursor: pointer;
-    border: 1px solid transparent;}
+    border: 1px solid transparent;
+}
 
 .projects {
     padding-top: 96px;
@@ -486,8 +530,15 @@ font-style: normal;
     column-gap: 24px;
 }
 
-.projects-item {
- 
+.projects-item{
+    transition-property: transition-duration, transition-timing-function;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+.projects-item:hover,
+.projects-item:focus {
+box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08), 0px 1px 1px 0px rgba(46, 47, 66, 0.16), 0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+
 }
 
 .projects-img {
@@ -568,9 +619,13 @@ margin-bottom: 8px;
     border-radius: 100%;
     justify-content: center;
     align-items: center;
+    transition-property: transition-duration, transition-timing-function;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-network-link:hover {
     background-color: var(--pressed-state-color);
+   
 }
 .team-network-icon {}
 /* Clients */
@@ -607,15 +662,70 @@ margin-bottom: 8px;
         border: 1px solid var(--subtle-text-color);
         justify-content: center;
         align-items: center;
+        transition-property: transition-duration, transition-timing-function;
+            transition-duration: 250ms;
+            transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 
 }
-.section-clients-link:hover {
+.section-clients-link:hover,
+.section-clients-link:focus {
     border-color: var(--pressed-state-color);
+   
 }
 .clients-icon {
 fill: var(--subtle-text-color);
 }
 .section-clients-link:hover .clients-icon {
     fill: var(--pressed-state-color);
+    
 }
 
+.section-clients-link:focus .clients-icon {
+    fill: var(--pressed-state-color);
+    
+}
+.section-clients-link .clients-icon {
+    transition-property: transition-duration, transition-timing-function;
+        transition-duration: 250ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Overlay */
+
+
+
+.projects-item:hover .overlay {
+    transform: translateY(0);
+    background-color: var(--primary-brand-color);
+
+}
+.projects-item {
+    overflow: hidden;
+    position: relative;
+}
+
+
+.overlay {
+ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform: translateY(100%);
+    
+    
+    transition-property: background-color;
+        transition-duration: 2500ms;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+     
+}
+.overlay p {
+    font-size: 16px;
+        font-family: Roboto;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: 0.32px;
+        color: var(--light-color);
+}
