@@ -229,7 +229,7 @@ max-width: 1440px;
         max-width: 496px;
        display: block;
        margin: 0 auto;
-        
+        margin-bottom: 48px;
 }
 
 .hero-btm {
@@ -696,34 +696,32 @@ fill: var(--subtle-text-color);
 
 /* Overlay */
 
-
-
-.projects-item:hover .overlay {
-    transform: translateY(0);
-    background-color: var(--primary-brand-color);
-
-}
-.projects-item {
-    overflow: hidden;
-    position: relative;
-}
-
-
 .overlay {
- 
+
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
+    background-color: var(--primary-brand-color);
     transform: translateY(100%);
-    
-    
-    transition-property: background-color;
-        transition-duration: 2500ms;
-        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-     
+    transition-property: background-color transform;
+    transition-duration: 2500ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+
+.projects-item:hover .overlay {
+    transform: translateY(0);
+    
+
+}
+.projects-item-img {
+    overflow: hidden;
+    position: relative;
+}
+
+
 .overlay-text {
     font-size: 16px;
         font-family: Roboto;
@@ -732,6 +730,7 @@ fill: var(--subtle-text-color);
         line-height: 24px;
         letter-spacing: 0.32px;
         color: var(--light-color);
+       
 }
 
 /* Modal window */
@@ -742,6 +741,7 @@ fill: var(--subtle-text-color);
     width: 100%;
     height: 100%;
     background-color: rgba(46, 47, 66, 0.40);
+    transition: opacity 250ms ease-out, visibility 250ms ease-out;
 }
 .backdrop.is-hidden {
    opacity: 0;
@@ -758,8 +758,11 @@ fill: var(--subtle-text-color);
     border-radius: 4px;
     background: var(--modal-background-color);
     box-shadow: 0px 2px 1px 0px rgba(0, 0, 0, 0.20), 0px 1px 3px 0px rgba(0, 0, 0, 0.12), 0px 1px 1px 0px rgba(0, 0, 0, 0.14);
-   
-
+transition: opacity 300ms ease-out 250ms, transform 300ms ease-out 250ms;
+}
+.backdrop.is-hidden .modal {
+    opacity: 0;
+    transform: translateX(-50%) translateY(70%);
 }
 .modal-button {
     position: absolute;
