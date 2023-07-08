@@ -706,8 +706,9 @@ fill: var(--subtle-text-color);
     background-color: var(--primary-brand-color);
     transform: translateY(100%);
     transition-property: background-color transform;
-    transition-duration: 2500ms;
+    transition-duration: 250ms;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 40px 32px 164px 32px ;
 }
 
 
